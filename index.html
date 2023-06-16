@@ -16,8 +16,8 @@
 
 <body>
 
-  <!-- Modal pop up message  -->
-  <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+  <!-- Modal pop up message  -->  
+  <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="showTaskLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -25,15 +25,58 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+
+          <!-- Form for modal -->
+          <form action="">
+            <!-- img url -->
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label">Image Url</label>
+              <input type="url" class="form-control" id="imageUrl" placeholder="http://example.com/image.png">
+            </div>
+            <!-- Title of the task -->
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Task Title</label>
+              <input type="text" class="form-control" id="taskTitle" placeholder="Do something new" required>
+            </div>
+            <!-- Task Type -->
+            <div class="mb-3">
+              <label for="tags" class="form-label">Task Type</label>
+              <input type="text" class="form-control" id="tags" placeholder="Work..." required>
+            </div>
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Task Description</label>
+              <textarea name="" id="taskDescription" class="form-control" placeholder="Describe something about it..."></textarea>
+            </div>
+
+            <!-- Button -->
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+
       </div>
     </div>
   </div>
+
+   <!-- Modal -->
+<div class="modal fade" id="showTask" tabindex="-1" aria-labelledby="showTaskLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="showTaskLabel">Task Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body task__modal__body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Button for the mobile screen -->
   <div class="add__new__btn__mobile__only d-md-none">
