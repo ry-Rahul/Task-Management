@@ -124,6 +124,8 @@ const deleteTask = (e) => {
    if (!e) e = window.event;
    const targetID = e.target.getAttribute("name");
    const type = e.target.tagName;
+
+   // if this id match with any id from state.taskList then remove it 
    const removeTask = state.taskList.filter(({ id }) => id !== targetID);
    state.taskList = removeTask;
 
